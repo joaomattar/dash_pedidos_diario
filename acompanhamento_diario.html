@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Power BI</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100vh;
+            border: none;
+        }
+    </style>
+    <script>
+        // Recarrega o iframe a cada 1 hora (3600000 ms)
+        setInterval(function() {
+            var iframe = document.querySelector('iframe');
+            var src = iframe.src;
+            iframe.src = '';
+            iframe.src = src;
+        }, 3600000);
+    </script>
+</head>
+<body>
+    <iframe title="dashboard_pedidos_diario" 
+            src="https://app.powerbi.com/reportEmbed?reportId=c6654692-4219-495f-ac60-869a17e279e0&autoAuth=true&ctid=e5f7c9fc-03cf-4409-83b9-877bfe7f1d2c" 
+            frameborder="0" allowFullScreen="true"></iframe>
+</body>
+</html>
